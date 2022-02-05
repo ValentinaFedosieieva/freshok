@@ -69,6 +69,7 @@
   }
   &__logo {
     padding: 25px 0;
+    margin-right: 24px;
   }
 }
 
@@ -92,8 +93,11 @@
 }
 
 .catalog {
+  position: relative;
+  margin-right: 30px;
   &__btn {
     padding: 15px 38px 15px 61px;
+    border: none;
     border-radius: 6px;
     outline: transparent;
     font-weight: 600;
@@ -102,9 +106,8 @@
     background-image: url(../images/icons/nav_catalog.svg);
     background-repeat: no-repeat;
     background-position: 10%;
-    margin-right: 30px;
-    margin-left: 24px;
     position: relative;
+    cursor: pointer;
     &::before {
       position: absolute;
       content: "";
@@ -115,6 +118,44 @@
       right: 7%;
       top: 45%;
     }
+    &.catalog__btn--active {
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+      background-color: $green-200;
+      &::before {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  &__content {
+    display: none;
+    &.catalog__content--active {
+      display: block;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: $white;
+      max-width: 240px;
+      width: 100%;
+      z-index: 999;
+    }
+  }
+  &__item {
+    padding: 15px 15px 15px 24px;
+    font-size: 16px;
+    letter-spacing: 0.03em;
+    color: #000;
+    border-left: 3px solid transparent;
+    transition: color 0.3s,
+                border-left 0.3s;
+    &:hover {
+      color: #63A60E;
+      border-left: 3px solid #63A60E;
+      cursor: pointer;
+    }
+  }
+  &__item:not(:last-child) {
+    border-bottom: 1px solid rgba(193, 193, 193, 0.3);
   }
 }
 
@@ -136,6 +177,7 @@
     padding: 15px 0 15px 51px;
     width: 100%;
     outline: transparent;
+    border: none;
     border-radius: 6px;
     &::placeholder {
       color: $dark-800;
@@ -148,10 +190,12 @@
     background-color: $dark-800;
     color: $white;
     text-transform: uppercase;
+    border: none;
     border-top-right-radius: 6px;
     border-bottom-right-radius: 6px;
     top: 0;
     right: 0;
+    cursor: pointer;
     transition: opacity 0.3s,
                 outline 0.3s;
     &:hover {
@@ -245,6 +289,7 @@
     padding: 12px;
     width: 100%;
     outline: transparent;
+    border: none;
     border-radius: 6px;
     &::placeholder {
       line-height: 1;
@@ -252,17 +297,32 @@
     }
   }
   &__btn {
-    padding: 12px 17px;
+    padding: 13.5px 17px;
     position: absolute;
     background-color: #63A60E;
     font-size: 12px;
     color: $white;
     @extend %opensans-700;
     text-transform: uppercase;
+    border: none;
     border-top-right-radius: 6px;
     border-bottom-right-radius: 6px;
     top: 0;
     right: 0;
+    cursor: pointer;
+    transition: background-color 0.3s,
+                box-shadow 0.3s,
+                color 0.3s;
+    &:hover {
+      background-color: #4D800C;
+    }
+    &:focus {
+      box-shadow: 0px 0px 0px 4px rgba(99, 166, 14, 0.5);
+    }
+    &:active {
+      box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+      color: rgba(255, 255, 255, 0.5);
+    }
   }
   &__menu {
     columns: 3;

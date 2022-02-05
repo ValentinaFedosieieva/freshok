@@ -1,9 +1,20 @@
+html,
+body {
+  height: 100%;
+}
+
 body {
   font-size: 14px;
   line-height: 1.4;
   color: $dark-900;
   background-color: $white;
   @extend %opensans-600;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex-grow: 1;
 }
 
 .container {
@@ -12,3 +23,4 @@ body {
   padding: 0 15px;
   width: 100%;
 }
+
