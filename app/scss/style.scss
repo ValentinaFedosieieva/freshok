@@ -258,20 +258,24 @@
 
 .top-slider {
   &__item {
-    height: 100vh;
+    min-height: 600px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    padding-top: 22%;
+    position: relative;
   }
 
   &__content {
     background-color: rgba(255, 255, 255, 0.8);
+    max-width: 1320px;
     width: 100%;
-    min-height: 315px;
+    height: 315px;
     padding: 24px 0 24px 24px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
-
   &__title {
     @extend %ruda-900;
     color: $dark-500;
@@ -284,7 +288,6 @@
       color: $red-900;
     }
   }
-
   &__text {
     color: $dark-500;
     margin: 12px 0 32px;
@@ -328,7 +331,6 @@
   z-index: 1;
   top: 50%;
   transform: translateY(-50%);
-
   &.slick-next {
     right: 0;
   }
