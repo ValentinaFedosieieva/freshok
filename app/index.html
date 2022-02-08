@@ -125,17 +125,50 @@
 
           <ul class="user__nav user">
             <li class="user__item">
-              <a class="user__link user__link--customer" href="#"></a>
+              <button class="user__btn user__btn--customer" type="button"></button>
             </li>
             <li class="user__item">
-              <a class="user__link user__link--favorite" href="#">
+              <button class="user__btn user__btn--favorite" type="button">
                 <div class="user__number">12</div>
-              </a>
+              </button>
             </li>
             <li class="user__item">
-              <a class="user__link user__link--cart" href="#">
+              <button class="user__btn user__btn--cart" type="button">
                 <div class="user__number">12</div>
-              </a>
+              </button>
+              <div class="user__dropdown-cart cart">
+                <div class="cart__head">
+                  <h3 class="cart__title">
+                    Корзина
+                  </h3>
+                  <button class="cart__btn-clean" type="button">
+                    очистить корзину
+                  </button>
+                  <button class="cart__btn-close" type="button">
+                  </button>
+                </div>
+                <div class="cart__body">
+                  <ul class="cart__list">
+                    <li class="cart__item">
+                      <a class="cart__link" href="#">
+                        <img class="cart__img" src="" alt="">
+                        <p class="cart__text">
+
+                        </p>
+                      </a>
+                    </li>
+                    <li class="cart__item">
+                      <a class="cart__link" href="#">
+
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="cart__botoom">
+
+                </div>
+
+              </div>
             </li>
           </ul>
 
@@ -147,14 +180,13 @@
 
   <main class="main">
     <section class="top-slider">
-
       <div class="top-slider__inner">
 
         <div class="top-slider__item" style="background-image: url(../images/slider/veg.jpg);">
           <div class="container">
             <div class="top-slider__content">
               <h1 class="top-slider__title">
-                СВЕЖАЧОК ВАМ в ХАТУ 
+                СВЕЖАЧОК ВАМ в ХАТУ
                 <span>Скидка -50%</span>
               </h1>
               <p class="top-slider__text">
@@ -192,8 +224,314 @@
             </div>
           </div>
 
-
         </div>
+      </div>
+    </section>
+
+    <section class="advantages">
+      <div class="container">
+        <div class="advantages__inner">
+          <div class="advantages__item advantages__item--scooter">
+            <h3 class="advantages__title">
+              Бесплатная доставка
+            </h3>
+            <p class="advantages__text">
+              Для заказов на сумму от 500 ₽
+            </p>
+          </div>
+
+          <div class="advantages__item advantages__item--return-box">
+            <h3 class="advantages__title">
+              Возврат товара
+            </h3>
+            <p class="advantages__text">
+              Если товары были испорчены
+            </p>
+          </div>
+
+          <div class="advantages__item advantages__item--24-hours">
+            <h3 class="advantages__title">
+              Поддержка 24/7
+            </h3>
+            <p class="advantages__text">
+              Лучшие операторы
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="top">
+      <div class="container">
+        <h2 class="title">
+          Топовые товары
+        </h2>
+        <ul class="top__filter filter">
+
+          <li class="filter__item">
+            <button class="filter__btn" type="button" data-filter="all">
+              Все товары
+            </button>
+          </li>
+
+          <li class="filter__item">
+            <button class="filter__btn" type="button" data-filter=".category-a">
+              Фрукты
+            </button>
+          </li>
+
+          <li class="filter__item">
+            <button class="filter__btn" type="button" data-filter=".category-b">
+              ОВОЩИ
+            </button>
+          </li>
+
+          <li class="filter__item">
+            <button class="filter__btn" type="button" data-filter=".category-c">
+              Напитки
+            </button>
+          </li>
+
+          <li class="filter__item">
+            <button class="filter__btn" type="button" data-filter=".category-c">
+              БАКАЛЕЯ
+            </button>
+          </li>
+        </ul>
+
+        <div class="top__cards">
+
+          <ul class="top__content">
+            <li class="top__item mix category-a">
+              <article class="top__card card">
+
+                <div class="card__head">
+                  <div class="card__badges">
+                    <div class="card__badge--green">
+                      НОВИНКА
+                    </div>
+                    <div class="card__badge--red">
+                      -50%
+                    </div>
+                  </div>
+                  <button class="card__favorite-btn"></button>
+                </div>
+
+                <a class="card__link" href="#">
+                  <img class="card__img" src="../images/products/pineapple.jpg" alt="Ананас">
+                </a>
+
+                <div class="card__bottom">
+                  <a class="card__bottom-link" href="#">
+                    Ананас, 1кг
+                  </a>
+                  <div class="card__price">
+                    <div class="card__price-old">
+                      1999 ₽
+                    </div>
+                    <div class="card__price-new">
+                      999 ₽ 
+                    </div>
+                  </div>
+                  <button class="card__cart-btn" type="button"></button>
+                </div>
+
+              </article>
+            </li>
+
+            <li class="top__item mix category-a">
+              <article class="top__card card">
+
+                <div class="card__head">
+                  <div class="card__badges">
+                  </div>
+                  <button class="card__favorite-btn" type="button"></button>
+                </div>
+
+                <a class="card__link" href="#">
+                  <img class="card__img" src="../images/products/lemon.jpg" alt="Лимон">
+                </a>
+
+                <div class="card__bottom">
+                  <a class="card__bottom-link" href="#">
+                    Лимон, 1кг
+                  </a>
+                  <div class="card__price">
+                    <div class="card__price-new">
+                      199 ₽
+                    </div>
+                  </div>
+                  <button class="card__cart-btn" type="button"></button>
+                </div>
+              </article>
+            </li>
+
+            <li class="top__item mix category-b">
+              <article class="top__card card">
+                <div class="card__head">
+                  <div class="card__badges">
+                    <div class="card__badge--orange">
+                      ХИТ
+                    </div>
+                  </div>
+                  <button class="card__favorite-btn" type="button"></button>
+                </div>
+                <a class="card__link" href="#">
+                  <img class="card__img" src="../images/products/dragon-fruit.jpg" alt="Питахайя">
+                </a>
+                <div class="card__bottom">
+                  <a class="card__bottom-link" href="#">
+                    Питахайя красная с белой мякотью, 1шт
+                  </a>
+                  <div class="card__price">
+                    <div class="card__price-new">
+                      1019 ₽
+                    </div>
+                  </div>
+                  <button class="card__cart-btn" type="button"></button>
+                </div>
+              </article>
+            </li>
+
+            <li class="top__item mix category-b">
+              <article class="top__card card">
+                <div class="card__head">
+                  <div class="card__badges">
+                  </div>
+                  <button class="card__favorite-btn"></button>
+                </div>
+                <a class="card__link" href="#">
+                  <img class="card__img" src="../images/products/ketchup.jpg" alt="Кетчуп">
+                </a>
+                <div class="card__bottom">
+                  <a class="card__bottom-link" href="#">
+                    Кетчуп томатный детский органический Bio-Zentrale 500мл, 1 шт
+                  </a>
+                  <div class="card__price">
+                    <div class="card__price-new">
+                      600 ₽
+                    </div>
+                  </div>
+                  <button class="card__cart-btn" type="button"></button>
+                </div>
+              </article>
+            </li>
+
+            <li class="top__item mix category-c">
+              <article class="top__card card">
+                <div class="card__head">
+                  <div class="card__badges">
+                    <div class="card__badge--orange">
+                      ХИТ
+                    </div>
+                  </div>
+                  <button class="card__favorite-btn" type="button"></button>
+                </div>
+                <a class="card__link" href="#">
+                  <img class="card__img" src="../images/products/carrot.jpg" alt="Морковь">
+                </a>
+                <div class="card__bottom">
+                  <a class="card__bottom-link" href="#">
+                    Морковь молодая с бабушкиной грядки, 1кг
+                  </a>
+                  <div class="card__price">
+                    <div class="card__price-new">
+                      49 ₽
+                    </div>
+                  </div>
+                  <button class="card__cart-btn" type="button"></button>
+                </div>
+              </article>
+            </li>
+
+            <li class="top__item mix category-c">
+              <article class="top__card card">
+                <div class="card__head">
+                  <div class="card__badges">
+                    <div class="card__badge--red">
+                      -30%
+                    </div>
+                  </div>
+                  <button class="card__favorite-btn" type="button"></button>
+                </div>
+                <a class="card__link" href="#">
+                  <img class="card__img" src="../images/products/juice.jpg" alt="Напиток сокосодержащий">
+                </a>
+                <div class="card__bottom">
+                  <a class="card__bottom-link" href="#">
+                    Напиток сокосодержащий Sanpellegrino Aranciata Orange Красный апельсин безалкогольн...
+                  </a>
+                  <div class="card__price">
+                    <div class="card__price-old">
+                      299 ₽
+                    </div>
+                    <div class="card__price-new">
+                      199 ₽
+                    </div>
+                  </div>
+                  <button class="card__cart-btn" type="button"></button>
+                </div>
+              </article>
+            </li>
+
+            <li class="top__item mix category-b">
+              <article class="top__card card">
+                <div class="card__head">
+                  <div class="card__badges">
+                    <div class="card__badge--green">
+                      НОВИНКА
+                    </div>
+                  </div>
+                  <button class="card__favorite-btn" type="button"></button>
+                </div>
+                <a class="card__link" href="#">
+                  <img class="card__img" src="../images/products/coffee.jpg" alt="Кофе">
+                </a>
+                <div class="card__bottom">
+                  <a class="card__bottom-link" href="#">
+                    Кофе с коноплей органический Caffé Salomoni 250г
+                  </a>
+                  <div class="card__price">
+                    <div class="card__price-new">
+                      877 ₽
+                    </div>
+                  </div>
+                  <button class="card__cart-btn" type="button"></button>
+                </div>
+              </article>
+            </li>
+
+            <li class="top__item mix category-a">
+              <article class="top__card card">
+                <div class="card__head">
+                  <div class="card__badges">
+                    <div class="card__badge--green">
+                      НОВИНКА
+                    </div>
+                  </div>
+                  <button class="card__favorite-btn" type="button"></button>
+                </div>
+                <a class="card__link" href="#">
+                  <img class="card__img" src="../images/products/paprik.jpg" alt="Перец">
+                </a>
+                <div class="card__bottom">
+                  <a class="card__bottom-link" href="#">
+                    Перец оранжевый, 1кг
+                  </a>
+                  <div class="card__price">
+                    <div class="card__price-new">
+                      349 ₽
+                    </div>
+                  </div>
+                  <button class="card__cart-btn" type="button"></button>
+                </div>
+              </article>
+            </li>
+          </ul>
+        </div>
+
+        <button class="top__btn btn" type="button">
+          Показать еще
+        </button>
       </div>
     </section>
   </main>
